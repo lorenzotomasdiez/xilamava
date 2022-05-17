@@ -1,8 +1,10 @@
-import { Typography } from '@mui/material'
-import type { NextPage } from 'next'
-import { ShopLayout } from '../components/layouts'
+import type { NextPage } from "next";
 
-const Home: NextPage = () => {
+import { Typography } from "@mui/material";
+
+import { ShopLayout } from "../../components/layouts";
+
+const SummerPage:NextPage = () => {
   return (
     <ShopLayout title={'XILAMAVA | SHOP'} pageDescription={'Encuentra los mejores productos de indumentaria femenina aqui'}>
       <Typography variant="h1" component="h1">Tienda</Typography>
@@ -12,4 +14,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default SummerPage
