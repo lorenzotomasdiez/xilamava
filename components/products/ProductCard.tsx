@@ -38,11 +38,11 @@ export const ProductCard:FC<Props> = ({product}) => {
 
                         }
                         <CardMedia
-                        component='img'
-                        image={productImage}
-                        alt={product.title}
-                        className="fadeIn"
-                        onLoad={()=> setIsImageLoaded(true)}
+                            component='img'
+                            image={productImage}
+                            alt={product.title}
+                            className="fadeIn"
+                            onLoad={()=> setIsImageLoaded(true)}
                         />
                     </CardActionArea>
                 </Link>

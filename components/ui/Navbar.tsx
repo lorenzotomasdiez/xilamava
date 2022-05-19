@@ -1,4 +1,4 @@
-import { SearchOutlined, ShoppingCartOutlined } from "@mui/icons-material"
+import { Menu, SearchOutlined, ShoppingCartOutlined } from "@mui/icons-material"
 import { AppBar, Badge, Box, Button, IconButton, Link, Toolbar, Typography } from "@mui/material"
 import NextLink from 'next/link'
 import { useContext } from "react";
@@ -8,11 +8,11 @@ import { UiContext } from "../../context";
 export const Navbar = () => {
   const {toggleSideMenu} = useContext(UiContext);
   return (
-    <AppBar>
-        <Toolbar>
+    <AppBar sx={{boxShadow: '0px 5px 5px rgba(0,0,0,0.05)'}}>
+        <Toolbar sx={{paddingBottom: '10px'}}>
             <NextLink href='/' passHref>
                 <Link>
-                    <Typography variant='h6'>XILAMAVA</Typography>
+                    <Typography variant='h6'>Xilamava</Typography>
                     <Typography sx={{m1:0.5}}>Shop</Typography>
                 </Link>
             </NextLink>
@@ -25,22 +25,22 @@ export const Navbar = () => {
             >
                 <NextLink href="/category/spring" passHref>
                     <Link>
-                        <Button color="info">Primavera</Button>
+                        <Button color="info" sx={{margin:'0 .5rem'}} className="circular-btn-scale">Primavera</Button>
                     </Link>
                 </NextLink>
                 <NextLink href="/category/summer" passHref>
                     <Link>
-                        <Button color="info">Verano</Button>
+                        <Button color="info" className="circular-btn-scale">Verano</Button>
                     </Link>
                 </NextLink>
                 <NextLink href="/category/autumn" passHref>
                     <Link>
-                        <Button color="info">Otoño</Button>
+                        <Button color="info" className="circular-btn-scale">Otoño</Button>
                     </Link>
                 </NextLink>
                 <NextLink href="/category/winter" passHref>
                     <Link>
-                        <Button color="info">Invierno</Button>
+                        <Button color="info" className="circular-btn-scale">Invierno</Button>
                     </Link>
                 </NextLink>
             </Box>
@@ -58,15 +58,15 @@ export const Navbar = () => {
             <NextLink href="/cart" passHref>
                 <Link>
                     <IconButton>
-                        <Badge badgeContent={1} color="secondary">
+                        <Badge badgeContent={1} color="primary">
                             <ShoppingCartOutlined />
                         </Badge>
                     </IconButton>
                 </Link>
             </NextLink>
 
-            <Button onClick={toggleSideMenu}>
-                Menu
+            <Button onClick={toggleSideMenu} className="btn-scale">
+                <Menu />
             </Button>
 
         </Toolbar>

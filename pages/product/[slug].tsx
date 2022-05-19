@@ -86,7 +86,7 @@ const ProductPage:FC<Props> = ({product}) => {
             {
               product.inStock > 0 
               ? (
-                  <Button color="success" className="circular-btn" onClick={onAddProduct}>
+                  <Button color={tempCartProduct.size ? 'primary' : 'secondary'} className="circular-btn" onClick={onAddProduct}>
                     {
                       tempCartProduct.size
                       ? 'Add to cart'
